@@ -9,6 +9,7 @@ import { authentication } from '@middlewares/authentication';
 import { logger } from '@middlewares/logger';
 import helmet from 'helmet';
 import { causeError } from '@routes/causeError';
+import responseTime from 'response-time';
 
 const app = express();
 
@@ -16,9 +17,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
+app.use(responseTime());
 
-app.use(logger);
 app.use(authentication);
+app.use(logger);
 
 // Routes:
 app.use(root);

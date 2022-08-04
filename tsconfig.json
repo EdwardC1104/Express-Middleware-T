@@ -19,7 +19,8 @@
             "@models/*": ["models/*"],
             "@routes/*": ["routes/*"],
             "@services/*": ["services/*"],
-            "@utils/*": ["utils/*"]
+            "@utils/*": ["utils/*"],
+            "@loggers/*": ["loggers/*"]
         },
         "typeRoots": ["@types", "./node_modules/@types"],
         "esModuleInterop": true,
